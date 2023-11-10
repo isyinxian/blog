@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>is yin xian blog</title>
+  
+  <subtitle>blog</subtitle>
+  <link href="https://isyinxian.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://isyinxian.github.io/blog/"/>
+  <updated>2023-11-10T01:44:26.323Z</updated>
+  <id>https://isyinxian.github.io/blog/</id>
+  
+  <author>
+    <name>yin xian</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>yilia</title>
+    <link href="https://isyinxian.github.io/blog/post/bb897e4e.html"/>
+    <id>https://isyinxian.github.io/blog/post/bb897e4e.html</id>
+    <published>2023-11-10T01:21:26.231Z</published>
+    <updated>2023-11-10T01:44:26.323Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hexo-theme-new-yilia"><a href="#hexo-theme-new-yilia" class="headerlink" title="hexo-theme-new-yilia"></a>hexo-theme-new-yilia</h1><p>一个简洁优雅的hexo主题</p><p>此项目是根据<a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a>主题做了一些优化，具体效果请看<a href="https://sanshui.findn.cn/">Demo</a>。</p><div align="center"><img src="../photos/static/new-yilia-demo.png" alt="new yalia demo"></div><h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><h3 id="全新安装"><a href="#全新安装" class="headerlink" title="全新安装"></a>全新安装</h3><p>首先，根据<a href="https://hexo.io/zh-cn/docs/">hexo官网教程</a>，安装hexo</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g <span class="comment"># npm 全局安装hexo-cli</span></span><br><span class="line">hexo init blog <span class="comment"># 初始化博客，会自动创建blog文件夹并安装依赖</span></span><br><span class="line"><span class="built_in">cd</span> blog <span class="comment"># 进入博客根目录blog</span></span><br></pre></td></tr></table></figure><ul><li>删除冲突的文件</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf scaffolds</span><br><span class="line"><span class="built_in">rm</span> -rf <span class="built_in">source</span></span><br><span class="line"><span class="built_in">rm</span> -rf themes</span><br><span class="line"><span class="built_in">rm</span> _config.yml</span><br><span class="line"><span class="built_in">rm</span> _config.landscape.yml</span><br><span class="line"><span class="built_in">rm</span> package.json</span><br></pre></td></tr></table></figure><ul><li>克隆repo到hexo博客根目录，并调整目录结构</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/jackhanyuan/hexo-theme-new-yilia.git</span><br><span class="line"><span class="built_in">mv</span> hexo-theme-new-yilia/* .</span><br><span class="line"><span class="built_in">rm</span> -rf hexo-theme-new-yilia</span><br></pre></td></tr></table></figure><ul><li>安装new-yilia所需依赖</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><h3 id="从其它Hexo主题升级"><a href="#从其它Hexo主题升级" class="headerlink" title="从其它Hexo主题升级"></a>从其它Hexo主题升级</h3><p>本步骤仅限从已有的Hexo主题升级，如果执行了<a href="#%E5%85%A8%E6%96%B0%E5%AE%89%E8%A3%85">全新安装</a>，请忽略本步骤。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes <span class="comment"># 进入原Hexo博客根目录下themes文件夹</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/jackhanyuan/hexo-theme-new-yilia.git</span><br><span class="line">rsync -avb --suffix=_bak hexo-theme-new-yilia/* .. <span class="comment"># 同步new-yilia主题到原Hexo博客根目录，如果有冲突会自动备份冲突文件（以_bak结尾）。</span></span><br><span class="line"><span class="built_in">rm</span> -rf hexo-theme-new-yilia</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>根据需求，修改hexo根目录下的 <code>_config.yml</code> 文件及<code>themes/new-yilia</code>目录下的<code>_config.yml</code>文件。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo常用命令</span></span><br><span class="line">hexo -v <span class="comment"># 查看hexo版本</span></span><br><span class="line">hexo cl <span class="comment"># 清理</span></span><br><span class="line">hexo g <span class="comment"># 构建</span></span><br><span class="line">hexo s <span class="comment"># 启动本地sever服务</span></span><br><span class="line">hexo d <span class="comment"># 部署</span></span><br></pre></td></tr></table></figure><h2 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h2><h3 id="Yilia主题bug修复"><a href="#Yilia主题bug修复" class="headerlink" title="Yilia主题bug修复"></a>Yilia主题bug修复</h3><ul><li>修复yilia主题所有文章列表不显示</li><li>yilia主题头像显示异常</li><li>修复手机端toc目录不显示</li><li>修复mathjax数学公式js失效及换行问题</li><li>移除已经关闭的多说和网易云跟帖评论系统</li><li>修复翻页不能正确显示的bug</li><li>修复分享到微信二维码失效问题</li><li>取消litten.me统计</li></ul><h3 id="Yilia主题功能新增"><a href="#Yilia主题功能新增" class="headerlink" title="Yilia主题功能新增"></a>Yilia主题功能新增</h3><ul><li>增加文章置顶功能</li><li>增加代码块复制功能</li><li>增加waline评论功能(含valine后端部署)</li><li>增加gittalk评论</li><li>增加APlayer播放器(可导入歌单)</li><li>增加live2d看板娘</li><li>增加归档页</li><li>增加分类和标签页</li><li>增加music页</li><li>增加相册photos和视频videos页</li><li>增加404页面(《圈小猫》游戏 和 腾讯公益404)</li></ul><h3 id="Yilia-主题美化"><a href="#Yilia-主题美化" class="headerlink" title="Yilia 主题美化"></a>Yilia 主题美化</h3><ul><li>文章添加字数统计和阅读时长</li><li>文章添加原创和转载标签</li><li>增加鼠标悬停头像旋转功能</li><li>侧栏left-col增加时钟clock显示</li><li>侧栏left-col增加网易云播放器</li><li>侧栏增加一言(hitokoto)</li><li>增加鼠标点击爱心love和文字特效</li><li>增加雪花飘落snow效果</li><li>文章底部增加版权声明</li><li>利用font-awesome给网站添加图标</li><li>侧栏subnav增加自定义图标</li><li>手机端增加smart menu按钮</li><li>添加不蒜子&#x2F;busuanzi访问量统计功能</li><li>footer添加网站运行时间</li><li>footer添加icp备案信息</li><li>footer添加主题信息</li><li>友链页面优化</li><li>修改css统一yilia主题视觉颜色</li><li>自定义背景图片</li><li>手机端美化</li></ul><h3 id="搜索引擎收录优化"><a href="#搜索引擎收录优化" class="headerlink" title="搜索引擎收录优化"></a>搜索引擎收录优化</h3><ul><li>文章URL链接使用abbrlink持久化</li><li>robots.txt配置</li><li>百度搜索资源平台（百度站长平台）配置</li><li>谷歌搜索( google search console)配置</li><li>百度主动推送链接配置</li><li>百度站长平台JS自动推送配置（该功能已被百度弃用）</li><li>sitemap站点地图生成与提交</li></ul><h3 id="网站统计分析"><a href="#网站统计分析" class="headerlink" title="网站统计分析"></a>网站统计分析</h3><ul><li>配置谷歌分析(google analytics)</li><li>配置百度统计</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-new-yilia&quot;&gt;&lt;a href=&quot;#hexo-theme-new-yilia&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-new-yilia&quot;&gt;&lt;/a&gt;hexo-theme-new-yilia&lt;/h1&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="yilia" scheme="https://isyinxian.github.io/blog/categories/yilia/"/>
+    
+    
+    <category term="yilia" scheme="https://isyinxian.github.io/blog/tags/yilia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>typora</title>
+    <link href="https://isyinxian.github.io/blog/post/dabb0af1.html"/>
+    <id>https://isyinxian.github.io/blog/post/dabb0af1.html</id>
+    <published>2023-11-10T01:21:26.229Z</published>
+    <updated>2023-11-10T01:44:17.461Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于typora怎么在右键快捷菜单添加-md文件"><a href="#关于typora怎么在右键快捷菜单添加-md文件" class="headerlink" title="关于typora怎么在右键快捷菜单添加.md文件"></a>关于typora怎么在右键快捷菜单添加.md文件</h1><p>如果typora在注册表的文件是typora.exe的话直接将以下代码复制到一个新建的txt文件中，然后<strong>另存为UTF-16LF</strong>的以**.ref为后缀**的注册表类型的文件</p><h2 id="1-代码"><a href="#1-代码" class="headerlink" title="1.代码"></a>1.代码</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_CLASSES_ROOT\.md]</span><br><span class="line">@=&quot;Typora.exe&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\.md\ShellNew]</span><br><span class="line">&quot;NullFile&quot;=&quot;&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\Typora.exe]</span><br><span class="line">@=&quot;Markdown&quot;</span><br></pre></td></tr></table></figure><p>@&#x3D;“Typora.exe” 是.md文件的运行程序<br>@&#x3D;“Markdown” 是新建时的默认文件名</p><h2 id="2-具体操作"><a href="#2-具体操作" class="headerlink" title="2.具体操作"></a>2.具体操作</h2><p>双击另存为生成的.ref文件，即可</p><div align="center"><img src="../photos/static/add_md.png" alt="new yalia demo"></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于typora怎么在右键快捷菜单添加-md文件&quot;&gt;&lt;a href=&quot;#关于typora怎么在右键快捷菜单添加-md文件&quot; class=&quot;headerlink&quot; title=&quot;关于typora怎么在右键快捷菜单添加.md文件&quot;&gt;&lt;/a&gt;关于typora怎么在右键快</summary>
+      
+    
+    
+    
+    <category term="typora" scheme="https://isyinxian.github.io/blog/categories/typora/"/>
+    
+    
+    <category term="typora" scheme="https://isyinxian.github.io/blog/tags/typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node</title>
+    <link href="https://isyinxian.github.io/blog/post/857fe845.html"/>
+    <id>https://isyinxian.github.io/blog/post/857fe845.html</id>
+    <published>2023-11-10T01:21:26.225Z</published>
+    <updated>2023-11-10T01:44:05.127Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="关于hexo、npm、node更到最新版本的问题"><a href="#关于hexo、npm、node更到最新版本的问题" class="headerlink" title="关于hexo、npm、node更到最新版本的问题"></a>关于hexo、npm、node更到最新版本的问题</h1><p>在用hexo搭建blog过程中遇到过各种各样的的问题，其中就有标题所提到的三者更新的问题。</p><p>因为本blog是基于hexo+new-yilia+github page构成的，在用到主题的时候遇到了，更换头像之后图片不显示的问题。向</p><p><a href="https://githubfast.com/jackhanyuan">new-yilia</a>主题的更新维护的博主反馈之后，博主给我建议之后，<del>我立马就解决了</del> 我尝试更新了本地的环境配置，结果误打误撞好了<del>虽然不知道是因为什么原因搞得但是能用就行</del>，不过更新也是踩了很多的坑，<del>主要网上的资料都是csdn的shishan文章、代码</del>最后终于试出来了至今还亲测有效的快捷的便捷的方法。</p><h2 id="1-node和npm的更新"><a href="#1-node和npm的更新" class="headerlink" title="1.node和npm的更新"></a>1.node和npm的更新</h2><p>网上大多数是命令，但是容易报错等等，最简单的安装就是到</p><p><a href="https://nodejs.org/en">node官网</a>下载带LTS的安装包，然后装到原有的node的安装目录下即可覆盖旧版本的node 而且顺带更新了npm </p><h2 id="2-hexo的更新"><a href="#2-hexo的更新" class="headerlink" title="2.hexo的更新"></a>2.hexo的更新</h2><p>按以下顺序逐步执行完成后，Hexo 版本及系统插件均会升级到最新。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//全局升级hexo-cli</span><br><span class="line">&gt; npm i hexo-cli -g</span><br><span class="line"></span><br><span class="line">//再次查看版本，看hexo-cli是否升级成功</span><br><span class="line">&gt; hexo version</span><br><span class="line"></span><br><span class="line">//安装npm-check，若已安装可以跳过</span><br><span class="line">&gt; npm install -g npm-check</span><br><span class="line"></span><br><span class="line">//检查系统插件是否需要升级</span><br><span class="line">&gt; npm-check</span><br><span class="line"></span><br><span class="line">//安装npm-upgrade，若已安装可以跳过</span><br><span class="line">&gt; npm install -g npm-upgrade</span><br><span class="line"></span><br><span class="line">//更新package.json</span><br><span class="line">&gt; npm-upgrade</span><br><span class="line"></span><br><span class="line">//更新全局插件</span><br><span class="line">&gt; npm update -g</span><br><span class="line"></span><br><span class="line">//更新系统插件</span><br><span class="line">&gt; npm update --save</span><br><span class="line"></span><br><span class="line">//再次查看版本，判断是否升级成功</span><br><span class="line">&gt; hexo version</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;关于hexo、npm、node更到最新版本的问题&quot;&gt;&lt;a href=&quot;#关于hexo、npm、node更到最新版本的问题&quot; class=&quot;headerlink&quot; title=&quot;关于hexo、npm、node更到最新版本的问题&quot;&gt;&lt;/a&gt;关于hexo、npm、nod</summary>
+      
+    
+    
+    
+    <category term="node" scheme="https://isyinxian.github.io/blog/categories/node/"/>
+    
+    
+    <category term="node" scheme="https://isyinxian.github.io/blog/tags/node/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>math</title>
+    <link href="https://isyinxian.github.io/blog/post/a927044d.html"/>
+    <id>https://isyinxian.github.io/blog/post/a927044d.html</id>
+    <published>2023-11-10T01:20:17.255Z</published>
+    <updated>2023-11-10T01:48:39.604Z</updated>
+    
+    <content type="html"><![CDATA[<p>如 $\lim_{x \to 0} \frac{\sin x}{x}$ 渲染的是</p><p>$$<br>\begin{eqnarray}<br> \lim_{x \to 0} \frac{\sin x + x^2 + x^3}{x} &amp; &#x3D; &amp; \lim_{x \to 0} \frac{\sin x }{x} + \lim_{x \to 0} \frac{x^2 }{x} + \lim_{x \to 0}\frac{x^3}{x}<br>\\ &amp; &#x3D; &amp; \lim_{x \to 0}\frac{\sin x}{x}<br>\\ &amp; &#x3D; &amp; 1<br>\end{eqnarray}<br>$$</p><span id="more"></span><p>斐波那契数列$A_n&#x3D;A_{n-1}+A_{n-2}$,前后两项的比值逐渐收敛到黄金分割比例<br>$$\lim_{n\to \infty}\frac{A_{n-1}}{A_n}&#x3D;\frac{\sqrt{5}-1}{2}.$$</p><p>因式分解<br>$$\begin{split}(x−1)(x−3)&amp;&#x3D;x^2−4x+3 \<br>&amp;&#x3D;x^2−4x+4−1 \<br>&amp;&#x3D;(x−2)^2−1<br>\end{split}<br>$$<br>狄利克雷函数<br>$$<br>D(x)&#x3D;<br>\begin{cases}<br>1,&amp; x \in Q \<br>0,&amp; x \notin Q<br>\end{cases}<br>$$<br>高斯公式<br>$$<br>\iiint_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right) d v&#x3D;\iint_{\Sigma} P d y d z+Q d z d x+R d x d y<br>$$</p><h2 id="物理公式"><a href="#物理公式" class="headerlink" title="物理公式"></a>物理公式</h2><ul><li>牛顿第一定律: $\sum \vec{F}_{i}&#x3D;\frac{\mathrm{d} \vec{v}}{\mathrm{d} t}&#x3D;0$</li><li>牛顿第二定律: $\vec{F}&#x3D;\frac{\mathrm{d} m}{\mathrm{d} t} \vec{v}+m \frac{\mathrm{d} \vec{v}}{\mathrm{d} t}&#x3D;\frac{\mathrm{d} m}{\mathrm{d} t} \vec{v}+m \vec{a}&#x3D;\frac{\mathrm{d} m}{\mathrm{d} t} \vec{v}+m \frac{\mathrm{d}^{2} \vec{r}}{\mathrm{d} t^{2}}$</li><li>牛顿第三定律: $\overrightarrow{F_{12}}&#x3D;-\overrightarrow{F_{21}}$</li><li>质能守恒: $E&#x3D;mc^2$</li></ul><h2 id="化学公式"><a href="#化学公式" class="headerlink" title="化学公式"></a>化学公式</h2><p>离子反应与沉淀: $\ce{SO4^2- + Ba^2+ -&gt; BaSO4 v}$</p><h2 id="生物公式"><a href="#生物公式" class="headerlink" title="生物公式"></a>生物公式</h2><p>光合作用<br>范德蒙行列式<br>$$D_{n-1}&#x3D;\left|\begin{array}{cccc}<br>1 &amp; 1 &amp; \dots &amp; 1 \<br>x_{2} &amp; x_{3} &amp; \dots &amp; x_{n} \<br>\vdots &amp; \vdots &amp; &amp; \vdots \<br>x_{2}^{n-2} &amp; x_{3}^{n-2} &amp; \dots &amp; x_{n}^{n-2}<br>\end{array}\right|&#x3D;\prod_{2 \leq j&lt;i \leq n}\left(x_{i}-x_{j}\right)$$</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;如 $&#92;lim_{x &#92;to 0} &#92;frac{&#92;sin x}{x}$ 渲染的是&lt;/p&gt;
+&lt;p&gt;$$&lt;br&gt;&#92;begin{eqnarray}&lt;br&gt; &#92;lim_{x &#92;to 0} &#92;frac{&#92;sin x + x^2 + x^3}{x} &amp;amp; &amp;#x3D; &amp;amp; &#92;lim_{x &#92;to 0} &#92;frac{&#92;sin x }{x} + &#92;lim_{x &#92;to 0} &#92;frac{x^2 }{x} + &#92;lim_{x &#92;to 0}&#92;frac{x^3}{x}&lt;br&gt;&#92;&#92; &amp;amp; &amp;#x3D; &amp;amp; &#92;lim_{x &#92;to 0}&#92;frac{&#92;sin x}{x}&lt;br&gt;&#92;&#92; &amp;amp; &amp;#x3D; &amp;amp; 1&lt;br&gt;&#92;end{eqnarray}&lt;br&gt;$$&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="math" scheme="https://isyinxian.github.io/blog/categories/math/"/>
+    
+    
+    <category term="math" scheme="https://isyinxian.github.io/blog/tags/math/"/>
+    
+  </entry>
+  
+</feed>
